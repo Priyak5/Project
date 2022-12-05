@@ -34,7 +34,6 @@ const SignUp = () => {
         setName(name);
         setPrice(price);
         setTicker(ticker);
-        console.log(userId);
         window.localStorage.setItem("user_id", userId);
         redirectToProfile();
       })

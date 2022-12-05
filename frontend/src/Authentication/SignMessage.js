@@ -4,7 +4,6 @@ import ErrorMessage from "./ErrorMessage";
 
 const signMessage = async ({ setError, message }) => {
   try {
-    console.log({ message });
     if (!window.ethereum)
       throw new Error("No crypto wallet found. Please install it.");
 

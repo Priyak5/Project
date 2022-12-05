@@ -57,9 +57,8 @@ const Navbar = () => {
       signature_hash: hash,
     };
     axios
-      .post("http://3.6.38.16:8000/user/login/", payload)
+      .post("https://3.6.38.16:8000/user/login/", payload)
       .then(function (response) {
-        console.log(response);
         const userExists = !(response.data.payload.name === "");
         const userId = response.data.payload.user_id;
 
@@ -68,7 +67,7 @@ const Navbar = () => {
           const accessToken = response.data.payload.jwt_credentials.access;
           window.localStorage.setItem("Authorization", `JWT ${accessToken}`);
           window.localStorage.setItem("user_id", userId);
-          console.log(response, "signup");
+
           if (userExists) {
             redirectToProfile();
           } else {

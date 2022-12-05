@@ -69,7 +69,7 @@ export const AddImageBox = ({ handleClose, type, callback }) => {
       .post("user/media/", data)
       .then(function (response) {
         setIsLoading(false);
-        console.log(response, "image");
+
         var profile = "";
         if (type === "POST") {
           profile = response.data;
