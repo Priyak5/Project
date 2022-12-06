@@ -70,7 +70,7 @@ Track our smart contracts : [https://ccnscan.computecoin.com/address/0x4EB40E14C
 
 This project is developed as part of the Web3 Stack Hack. If you are a panelist/judge/reviewer, please check out the following steps.
 
-The demo video is here:n[ https://www.youtube.com/watch?v=aCtSajvr0LQ](https://youtu.be/KZsGBbG5Xwo)
+The demo video is here:n[https://youtu.be/CV0x3aUVkQA](https://youtu.be/CV0x3aUVkQA)
 
 The app is deployed at [https://fanstop-frontend.vercel.app/](https://super-fans.netlify.app/)
 
