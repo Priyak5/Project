@@ -72,7 +72,7 @@ This project is developed as part of the Web3 Stack Hack. If you are a panelist/
 
 The demo video is here:n[https://youtu.be/CV0x3aUVkQA](https://youtu.be/CV0x3aUVkQA)
 
-The app is deployed at [https://fanstop-frontend.vercel.app/](https://super-fans.netlify.app/)
+The app is deployed at [http://superfan.pkbhtech.com/](http://superfan.pkbhtech.com/)
 
 
 
