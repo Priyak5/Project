@@ -10,11 +10,13 @@ import InputAdornment from "@mui/material/InputAdornment";
 import { axiosInstance } from "../api";
 import { toast } from "react-toastify";
 import { url } from "../constants";
+import { useNavigate } from "react-router";
 
 const SignUp = () => {
   const [name, setName] = useState("");
   const [price, setPrice] = useState(0);
   const [ticker, setTicker] = useState("");
+  const navigate = useNavigate();
 
   const onSignupClick = (name, price, ticker) => {
     const finalPrice = price * 10 ** 18;
@@ -52,11 +54,8 @@ const SignUp = () => {
   };
 
   const redirectToProfile = () => {
-    window.open(
-      `${url}/superfan/profile?user_id=${window.localStorage.getItem(
-        "user_id"
-      )}`,
-      "_self"
+    navigate(
+      `/superfan/profile?user_id=${window.localStorage.getItem("user_id")}`
     );
   };
 

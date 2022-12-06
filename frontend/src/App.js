@@ -1,6 +1,6 @@
 import "./App.css";
 import MainLayout from "./MainLayout";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { Route, Routes, useNavigate } from "react-router-dom";
 import Profile from "./components/Profile";
 import SignUp from "./pages/Signup";
 import { ToastContainer } from "react-toastify";
@@ -10,9 +10,10 @@ import { url } from "./constants";
 
 function App() {
   const [currentAccount, setCurrentAccount] = useState("");
+  const navigate = useNavigate();
 
   const redirectToHome = (name) => {
-    if (name !== "") window.open(`${url}/superfan/mainpage`, "_self");
+    if (name !== "") navigate(`/superfan/mainpage`);
   };
 
   const checkIfAccountChanged = async () => {
@@ -49,16 +50,15 @@ function App() {
           pauseOnHover
           theme="dark"
         />
-        <Router>
-          <Routes>
-            <Route path="/" element={<MainLayout />} />
-            <Route path="/superfan" element={<MainLayout />} />
-            <Route path="/superfan/mainpage" element={<MainLayout />} />
-            <Route path="/superfan/login" element={<MainLayout />} />
-            <Route path="/superfan/profile" element={<Profile />} />
-            <Route path="/superfan/signup" element={<SignUp />} />
-          </Routes>
-        </Router>
+
+        <Routes>
+          <Route path="/" element={<MainLayout />} />
+          <Route path="/superfan" element={<MainLayout />} />
+          <Route path="/superfan/mainpage" element={<MainLayout />} />
+          <Route path="/superfan/login" element={<MainLayout />} />
+          <Route path="/superfan/profile" element={<Profile />} />
+          <Route path="/superfan/signup" element={<SignUp />} />
+        </Routes>
       </header>
     </div>
   );

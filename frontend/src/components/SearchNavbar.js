@@ -4,7 +4,7 @@ import logo from "../logo.png";
 import { Autocomplete } from "@mui/material";
 import { TextField } from "@mui/material";
 import { ResizableButton } from "../styled_components";
-import { useSearchParams } from "react-router-dom";
+import { useNavigate, useSearchParams } from "react-router-dom";
 import { axiosInstance } from "../api";
 import { toast } from "react-toastify";
 import { url } from "../constants";
@@ -12,6 +12,7 @@ import { url } from "../constants";
 const SearchNavbar = () => {
   const [searchList, setSearchList] = useState([]);
   const [currentInput, setCurrentInput] = useState("");
+  const navigate = useNavigate();
 
   const getSearchList = (k) => {
     axiosInstance
@@ -58,21 +59,16 @@ const SearchNavbar = () => {
   const isSelf = user_id === window.localStorage.getItem("user_id");
 
   const redirectToHome = (name) => {
-    if (name !== "") window.open(`${url}/superfan/mainpage`, "_self");
+    if (name !== "") navigate(`/superfan/mainpage`);
   };
+
   const redirectToSelf = () => {
-    window.open(
-      `${url}/superfan/profile?user_id=${window.localStorage.getItem(
-        "user_id"
-      )}`,
-      "_self"
+    navigate(
+      `/superfan/profile?user_id=${window.localStorage.getItem("user_id")}`
     );
   };
   const redirectToProfile = (currentlySelected) => {
-    window.open(
-      `${url}/superfan/profile?user_id=${currentlySelected}`,
-      "_self"
-    );
+    navigate(`/superfan/profile?user_id=${currentlySelected}`);
   };
 
   const [currentlySelected, setSelected] = useState("");

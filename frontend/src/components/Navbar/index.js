@@ -7,6 +7,7 @@ import axios from "axios";
 import noop from "lodash-es/noop";
 import { toast } from "react-toastify";
 import { url } from "../../constants";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const [signatures, setSignatures] = useState([]);
@@ -19,7 +20,7 @@ const Navbar = () => {
   const isUserLoggedin =
     window.localStorage.getItem("user_id") === "" ||
     window.localStorage.getItem("user_id") === undefined;
-
+  const navigate = useNavigate();
   const signMessage = async ({ setError, message }) => {
     try {
       if (!window.ethereum) {
@@ -55,10 +56,11 @@ const Navbar = () => {
       setError(err.message);
       setShowLogin(false);
     }
+    redirectToSignup();
   };
 
   const redirectToSignup = () => {
-    window.open(`${url}/superfan/signup`, "_self");
+    navigate("superfan/signup");
   };
 
   const loginUser = (address, hash) => {
@@ -114,12 +116,10 @@ const Navbar = () => {
       }
     }
   };
+
   const redirectToProfile = () => {
-    window.open(
-      `${url}/superfan/profile?user_id=${window.localStorage.getItem(
-        "user_id"
-      )}`,
-      "_self"
+    navigate(
+      `/superfan/profile?user_id=${window.localStorage.getItem("user_id")}`
     );
   };
 

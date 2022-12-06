@@ -38,7 +38,6 @@ function PostGrid(posts = []) {
     const viewMedia = new ethers.Contract("addr", "json", provider);
   };
   const media = posts.posts ?? [];
-  // console.log(media);
   const [loaded, setLoaded] = useState(false);
 
   return (
