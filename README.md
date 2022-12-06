@@ -41,18 +41,18 @@ Because centralized social media platforms are often dominant in their market, t
 
 - Uses the **Oort DSS** to save and store images on Storj. 
 
-- Uploaded images are saved on **Storj**, which is private, affordable and decentralized. 
+- Uploaded images are saved on **Storj**, which is **private, affordable and decentralized**. 
 
 - **Zero commision**. Get commission directly from fans without any fee. (Who doesn’t love no commision :P) 
 
-- Creators get commission quickly and directly by their fans in the form of cryptocurrency.
+- Creators get commission quickly and directly by their fans in the form of **cryptocurrency**.
 
-- Enables creators to build a meaningful community. 🤝
+- Enables creators to build a **meaningful community**. 🤝
  
 
 ## How it works? 
 
-There are two types of smart contracts. One is the **deployer smart contract** and the other is the** ERC-721 smart contract**. Every user on the platform has their own smart contract deployed on Olympus blockchain. These smart contracts are deployed and tracked by the “Deployer” smart contract.
+There are two types of smart contracts. One is the **deployer smart contract** and the other is the **ERC-721 smart contract**. Every user on the platform has their own smart contract deployed on Olympus blockchain. These smart contracts are deployed and tracked by the “Deployer” smart contract.
 
 ![smart-contract-interaction-drawio.png](https://user-images.githubusercontent.com/32927328/205826259-1fdc9eb9-6029-495d-aeb8-f5fe500ee4a1.jpeg)
 
