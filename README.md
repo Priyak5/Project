@@ -54,13 +54,17 @@ Because centralized social media platforms are often dominant in their market, t
 
 There are two types of smart contracts. One is the **deployer smart contract** and the other is the** ERC-721 smart contract**. Every user on the platform has their own smart contract deployed on Olympus blockchain. These smart contracts are deployed and tracked by the “Deployer” smart contract.
 
-[![smart-contract-interaction-drawio.png](https://i.postimg.cc/Gh0SCwFy/smart-contract-interaction-drawio.png)](https://postimg.cc/qgLGsFZJ)
+![smart-contract-interaction-drawio.png](https://user-images.githubusercontent.com/32927328/205826259-1fdc9eb9-6029-495d-aeb8-f5fe500ee4a1.jpeg)
 
 [![super-fans-architecture.png](https://i.postimg.cc/pV1bCqpy/super-fans-architecture.png)](https://postimg.cc/4ntSNvvT)
 
 Contract Address : ```0x4EB40E14CADd820103097C004ed71dEb593122A0```
 
 Track our smart contracts : [https://ccnscan.computecoin.com/address/0x4EB40E14CADd820103097C004ed71dEb593122A0](https://ccnscan.computecoin.com/address/0x4EB40E14CADd820103097C004ed71dEb593122A0)
+
+#### Data storage 
+
+![photo_6086948074640487969_y](https://user-images.githubusercontent.com/32927328/205826724-489c8853-e730-407c-89ea-9ba8649c139f.jpg)
 
 # Web3 Stack Hack 
 
