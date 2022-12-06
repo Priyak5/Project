@@ -68,7 +68,7 @@ const Navbar = () => {
       signature_hash: hash,
     };
     axios
-      .post("https://3.6.38.16:8000/user/login/", payload)
+      .post("https://7861-43-205-190-168.in.ngrok.io/user/login/", payload)
       .then(function (response) {
         const userExists = !(response.data.payload.name === "");
         const userId = response.data.payload.user_id;

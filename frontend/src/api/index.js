@@ -1,6 +1,6 @@
 import axios from "axios";
 
 export const axiosInstance = axios.create({
-  baseURL: "https://3.6.38.16:8000/",
+  baseURL: "https://7861-43-205-190-168.in.ngrok.io/",
   headers: { Authorization: window.localStorage.getItem("Authorization") },
 });
