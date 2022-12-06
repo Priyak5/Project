@@ -266,6 +266,20 @@ export const AddImageBox = ({ handleClose, type, callback }) => {
           <ResizableButton
             borderRadius="20px"
             color="#fff"
+            bgColor="#6D5CD3"
+            border="1px solid  #6D5CD3"
+            height="44px"
+            width="200px"
+            onClick={onClose}
+          >
+            <Box fontSize="16px" fontWeight="600">
+              {"Change"}
+            </Box>
+          </ResizableButton>
+          <Box px="10px" />
+          <ResizableButton
+            borderRadius="20px"
+            color="#fff"
             bgColor={displayImageURL ? "#6D5CD3" : "#9c9c9c"}
             border={displayImageURL ? "1px solid #6D5CD3" : "1px solid #9c9c9c"}
             hoverColor={displayImageURL ? "#6D5CD3" : "#9c9c9c"}
@@ -275,20 +289,6 @@ export const AddImageBox = ({ handleClose, type, callback }) => {
           >
             <Box fontSize="16px" fontWeight="600">
               {isLoading ? <CircularProgress color="inherit" /> : "Upload"}
-            </Box>
-          </ResizableButton>
-          <Box px="10px" />
-          <ResizableButton
-            borderRadius="20px"
-            color="#fff"
-            bgColor="#6D5CD3"
-            border="1px solid  #6D5CD3"
-            height="44px"
-            width="200px"
-            onClick={onClose}
-          >
-            <Box fontSize="16px" fontWeight="600">
-              {"Change"}
             </Box>
           </ResizableButton>
         </Box>

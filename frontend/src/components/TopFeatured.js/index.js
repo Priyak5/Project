@@ -56,7 +56,12 @@ const TopFeatured = () => {
       >
         {videoUrls.map((video, index) => {
           return (
-            <Box width="100%" display="flex" justifyContent="center">
+            <Box
+              width="100%"
+              display="flex"
+              justifyContent="center"
+              index={`indexvid${index}`}
+            >
               <VideoViewer url={video} />
             </Box>
           );

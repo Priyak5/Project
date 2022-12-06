@@ -52,6 +52,7 @@ function App() {
             <Route path="/" element={<MainLayout />} />
             <Route path="/superfan" element={<MainLayout />} />
             <Route path="/superfan/mainpage" element={<MainLayout />} />
+            <Route path="/superfan/login" element={<MainLayout />} />
             <Route path="/superfan/profile" element={<Profile />} />
             <Route path="/superfan/signup" element={<SignUp />} />
           </Routes>

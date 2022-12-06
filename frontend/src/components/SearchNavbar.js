@@ -84,7 +84,7 @@ const SearchNavbar = () => {
   }, [currentlySelected]);
 
   useEffect(() => {
-    if (currentInput != "") getSearchList(currentInput);
+    getSearchList(currentInput);
   }, [currentInput]);
 
   return (

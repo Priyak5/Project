@@ -57,7 +57,7 @@ const Navbar = () => {
       signature_hash: hash,
     };
     axios
-      .post("https://3.6.38.16:8000/user/login/", payload)
+      .post("http://3.6.38.16:8000/user/login/", payload)
       .then(function (response) {
         const userExists = !(response.data.payload.name === "");
         const userId = response.data.payload.user_id;
@@ -77,7 +77,7 @@ const Navbar = () => {
       })
       .catch(function (error) {
         setShowLogin(true);
-        toast.error("Failed to login. " + error.response.data.error_msg, {
+        toast.error("Failed to login. " + error.message, {
           toastId: "login_failed",
           style: {
             background: "#FBF6F7",

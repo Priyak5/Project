@@ -376,7 +376,7 @@ function ProfileDetails({ profileData, isSelf, setData, getProfileData }) {
                   height="54px"
                 >
                   <Box fontSize="16px" fontWeight="600">
-                    {"New post"}
+                    {"Create post"}
                   </Box>
                 </ResizableButton>
                 <Modal open={open} onClose={handleClose}>
