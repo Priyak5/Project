@@ -35,7 +35,7 @@ function Profile() {
 
   useEffect(() => {
     getProfileData();
-  }, []);
+  }, [user_id]);
 
   const getProfileData = () => {
     setIsLoading(true);
@@ -77,8 +77,9 @@ function Profile() {
         display="flex"
         justifyContent="center"
         alignItems="center"
-        height="500px"
-        width="578px"
+        background="#000"
+        height="1000px"
+        width="100%"
       >
         <CircularProgress />
       </Box>

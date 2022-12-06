@@ -68,6 +68,7 @@ const SearchNavbar = () => {
     );
   };
   const redirectToProfile = (currentlySelected) => {
+    console.log(currentlySelected);
     navigate(`/superfan/profile?user_id=${currentlySelected}`);
   };
 

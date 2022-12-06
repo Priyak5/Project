@@ -141,7 +141,8 @@ function ProfileDetails({ profileData, isSelf, setData, getProfileData }) {
     const tickerb = get(profileData, "ticker", "");
     setTicker(tickerb);
     const cost = get(profileData, "price", "");
-    setPrice(cost);
+    const newCost = cost / 10 ** 18;
+    setPrice(newCost);
     const posts = get(profileData, "posts", "");
     setPosts(posts);
     const totalEarnings = get(profileData, "total_earnings", "");

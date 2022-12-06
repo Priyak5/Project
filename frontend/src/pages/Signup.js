@@ -40,7 +40,7 @@ const SignUp = () => {
         redirectToProfile();
       })
       .catch(function (error) {
-        toast.error(error.message, {
+        toast.error(error.response.data.error_msg, {
           toastId: "sign_up_failed",
           style: {
             background: "#FBF6F7",
