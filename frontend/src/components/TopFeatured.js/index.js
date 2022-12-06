@@ -60,7 +60,7 @@ const TopFeatured = () => {
               width="100%"
               display="flex"
               justifyContent="center"
-              index={`indexvid${index}`}
+              key={`indexvid${index}`}
             >
               <VideoViewer url={video} />
             </Box>
