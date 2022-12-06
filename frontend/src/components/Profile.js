@@ -41,7 +41,7 @@ function Profile() {
     setIsLoading(true);
     setIsError(false);
     axiosInstance
-      .get(`user/profile/${user_id}`)
+      .get(`user/profile/${user_id}/`)
       .then(function (response) {
         setIsLoading(false);
         setIsError(false);
