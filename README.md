@@ -31,6 +31,10 @@ Because centralized social media platforms are often dominant in their market, t
 
 # Solution - Superfan :rocket:
 
+- **Decentralized** private content platform to empower creators.
+
+- **Censorship-resistant and open to everyone**. This means users cannot be banned, deplatformed, or restricted arbitrarily.
+
 - Eliminates the **“middleman”** and gives content creators direct ownership and control of their data and content. They can also engage with followers, fans, customers and others directly, with only a smart contract standing between them.
 
 - Built on **Olympus blockchain**, added layer of anonymity and privacy.
