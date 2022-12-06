@@ -15,15 +15,26 @@ const Navbar = () => {
   const [error, setError] = useState();
   const [showLogin, setShowLogin] = useState(false);
   const [isConnected, setIsConnceted] = useState(false);
+  const [isMetamaskInstalled, setIsMetamaskInstalled] = useState(false);
   const isUserLoggedin =
     window.localStorage.getItem("user_id") === "" ||
     window.localStorage.getItem("user_id") === undefined;
 
   const signMessage = async ({ setError, message }) => {
     try {
-      console.log({ message });
-      if (!window.ethereum)
-        throw new Error("No crypto wallet found. Please install it.");
+      if (!window.ethereum) {
+        toast.error("No crypto wallet found. Please install it.", {
+          toastId: "login_failed",
+          style: {
+            background: "#FBF6F7",
+            border: "1px solid #EF4F5F",
+            borderRadius: "4px",
+            fontSize: "14px",
+            color: "#EF4F5F",
+          },
+        });
+        return;
+      }
 
       await window.ethereum.send("eth_requestAccounts");
       const provider = new ethers.providers.Web3Provider(window.ethereum);
@@ -42,7 +53,7 @@ const Navbar = () => {
       };
     } catch (err) {
       setError(err.message);
-      setShowLogin(true);
+      setShowLogin(false);
     }
   };
 
@@ -57,7 +68,7 @@ const Navbar = () => {
       signature_hash: hash,
     };
     axios
-      .post("http://3.6.38.16:8000/user/login/", payload)
+      .post("https://3.6.38.16:8000/user/login/", payload)
       .then(function (response) {
         const userExists = !(response.data.payload.name === "");
         const userId = response.data.payload.user_id;
@@ -96,8 +107,12 @@ const Navbar = () => {
       message: "You are signing into SuperFans.",
     });
     await sig;
-    setSignatures([...signatures, sig]);
-    setIsConnceted(true);
+    if (sig.result !== undefined) {
+      setSignatures([...signatures, sig]);
+      if (isMetamaskInstalled) {
+        setIsConnceted(true);
+      }
+    }
   };
   const redirectToProfile = () => {
     window.open(
@@ -162,7 +177,7 @@ const Navbar = () => {
             </Box>
           </ResizableButton>
         )}
-        {showLogin && (
+        {showLogin && isMetamaskInstalled && (
           <ResizableButton
             width="178px"
             borderRadius="20px"

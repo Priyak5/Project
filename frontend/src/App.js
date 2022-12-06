@@ -18,11 +18,13 @@ function App() {
   const checkIfAccountChanged = async () => {
     try {
       const { ethereum } = window;
-      ethereum.on("accountsChanged", (accounts) => {
-        console.log("Account changed to:", accounts[0]);
-        setCurrentAccount(accounts[0]);
-        redirectToHome();
-      });
+      if (ethereum != undefined) {
+        ethereum.on("accountsChanged", (accounts) => {
+          console.log("Account changed to:", accounts[0]);
+          setCurrentAccount(accounts[0]);
+          redirectToHome();
+        });
+      }
     } catch (error) {
       console.log(error);
     }
@@ -30,7 +32,7 @@ function App() {
 
   useEffect(() => {
     checkIfAccountChanged();
-  }, []);
+  }, [currentAccount]);
 
   return (
     <div className="App">
